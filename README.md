@@ -1,0 +1,51 @@
+
+# PV324
+
+Note: Some files may require the creation of appropriate folders.
+
+Base forecasts:
+
+- `0_base_forecasts.R`: Calculation of base ETS forecasts for the 6
+  upper time series
+- `0_info_reco.R`: Information on cross-temporal reconciliation
+
+Reconciled forecasts:
+
+- `1_reco_thf.R`: temporal reconciliation (Athanasopoulos et al., 2017)
+- `1_reco_hts.R`: cross-sectional reconciliation (Wickramasuriya et al.,
+  2019)
+- `1_reco_ite_tol.R`: iterative reconciliation (convergence
+  ite(wlsv\[te\], wls\[cs\]), Di Fonzo and Girolimetto, 2021)
+- `1_reco_ite.R`: iterative reconciliation (Di Fonzo and Girolimetto,
+  2021)
+- `1_reco_ka.R`: Kourentzes and Athanasopoulos (2019) reconciliation
+- `1_reco_oct.R`: cross-temporal reconciliation (Di Fonzo and
+  Girolimetto, 2021)
+- `1_reco_seqL2.R`: sequential L2 reconciliation (Yagli et al., 2019))
+
+nRMSE and MBE:
+
+- `2_extract_forecasts.R`: reorganizes forecasts to calculate indices
+- `3_nRMSEdata.R`: calculation of nRMSE
+- `3_nMBEdata.R`: calculation of nMBE
+
+### References:
+
+Athanasopoulos, G., Hyndman, R.J., Kourentzes, N., Petropoulos, F.,
+2017. Forecasting with temporal hierarchies. European Journal of
+Operational Research 262, 60-74.
+[doi:10.1016/j.ejor.2017.02.046](https://doi:10.1016/j.ejor.2017.02.046).
+
+Di Fonzo, T. and D. Girolimetto (2023, January). Cross-temporal forecast
+reconciliation: Optimal combination method and heuristic alternatives.
+International Journal of Forecasting 39(1), 39-57.
+[doi:10.1016/j.ijforecast.2021.08.004](https://doi.org/10.1016/j.ijforecast.2021.08.004).
+
+Kourentzes, N., Athanasopoulos, G., 2019. Cross-temporal coherent
+forecasts for Australian tourism. Annals of Tourism Research 75,
+393-409.
+[doi:10.1016/j.annals.2019.02.001](https://doi:10.1016/j.solener.2018.12.075).
+
+Yagli, G.M., Yang, D., Srinivasan, D., 2019. Reconciling solar
+forecasts: Sequential reconciliation. Solar Energy 179, 391-397.
+[doi:10.1016/j.solener.2018.12.075](https://doi:10.1016/j.solener.2018.12.075).
